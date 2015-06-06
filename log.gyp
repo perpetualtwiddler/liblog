@@ -31,6 +31,15 @@
               'NDEBUG',
               '_CRT_SECURE_NO_WARNINGS',
             ],
+            'msvs_settings': {
+              'VCCLCompilerTool': {
+                'CompileAs': 2,
+                'WarningLevel': 3,
+                'AdditionalOptions': [
+                  '/Ox',
+                ],
+              },
+            },
           }]
         ],
       },
@@ -70,6 +79,15 @@
               'NDEBUG',
               '_CRT_SECURE_NO_WARNINGS',
             ],
+            'msvs_settings': {
+              'VCCLCompilerTool': {
+                'CompileAs': 2,
+                'WarningLevel': 3,
+                'AdditionalOptions': [
+                  '/Ox',
+                ],
+              },
+            },
           }]
         ],
       },
