@@ -7,6 +7,10 @@
 #define U8 "%I64u"
 #define THREAD_ID GetCurrentThreadId
 #else
+#include <inttypes.h>               /* for PRId64, etc. */
+#include <stdlib.h>                 /* for malloc(), etc. */
+#include <string.h>                 /* for strerror_r() */
+#include <unistd.h>                 /* for usleep() */
 #define THR_ID_T pthread_t
 #define D8 "%" PRId64
 #define U8 "%" PRIu64

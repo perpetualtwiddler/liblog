@@ -12,7 +12,11 @@ typedef uint32_t u4b;
 typedef int64_t i8b;
 typedef uint64_t u8b;
 
+#ifdef _WIN32_WINNT
+
 i4b gettimeofday(struct timeval * tv, struct timezone * /* tzp */);
 i4b llvsnprintf(char * buf, size_t cnt, const char * fmt, va_list ap);
+
+#endif // _WIN32_WINNT
 
 #endif // _UTIL_HEADER_INCLUDED_
