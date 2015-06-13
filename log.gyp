@@ -35,9 +35,6 @@
               'VCCLCompilerTool': {
                 'CompileAs': 2,
                 'WarningLevel': 3,
-                'AdditionalOptions': [
-                  '/Ox',
-                ],
               },
             },
           }]
@@ -83,9 +80,6 @@
               'VCCLCompilerTool': {
                 'CompileAs': 2,
                 'WarningLevel': 3,
-                'AdditionalOptions': [
-                  '/Ox',
-                ],
               },
             },
           }]

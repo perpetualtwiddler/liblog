@@ -168,7 +168,7 @@ log_rollover(LogHandle * lhp)
 }
 
 i4b
-is_autorollover_close(const LogHandle * lhp, const struct tm * tms)
+is_autorollover_nearly_due(const LogHandle * lhp, const struct tm * tms)
 {
     if (log_get_autorollover(lhp) == 0)
         return 0;
@@ -227,7 +227,7 @@ log_write(LogHandle * lhp, const char * fn, const char * func,
         }
         lbuf[cnt++] = '\n';     /* replace trailing '\0', can't use strlen() */
 
-        if (is_autorollover_close(lhp, &tms)) {
+        if (is_autorollover_nearly_due(lhp, &tms)) {
             LOCK_MUTEX(&lhp->mutex);
             lockacquired = 1;
             if (is_autorollover_due(lhp, &tms)) {

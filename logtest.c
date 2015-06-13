@@ -68,6 +68,7 @@ main(i4b argc, char ** argv)
         rv = LDEV(lhp, "longtextwithoutspaceusingmacrofor %s", "developer");
         rv = LSPT(lhp, "longtextwithoutspaceusingmacrofor %s", "support");
         rv = LUSR(lhp, "longtextwithoutspaceusingmacrofor %s", "user");
+        rv = LDEV(lhp, "no params log string");
 
         if (rv != LLE_SUCCESS) {
             printf("logwrite() failed with %d\n", rv);

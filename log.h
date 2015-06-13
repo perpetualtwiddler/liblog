@@ -64,11 +64,11 @@ void log_enable_autorollover(LogHandle * lhp);
 i4b log_get_autorollover(const LogHandle * lhp);
 
 #define LDEV(lhp, fmt, ...) log_write(lhp, __FILE__, __func__, __LINE__, \
-                                      LL_DEV, fmt, __VA_ARGS__)
+                                      LL_DEV, fmt, ##__VA_ARGS__)
 
 #define LSPT(lhp, fmt, ...) log_write(lhp, __FILE__, __func__, __LINE__, \
-                                      LL_SPT, fmt, __VA_ARGS__)
+                                      LL_SPT, fmt, ##__VA_ARGS__)
 
 #define LUSR(lhp, fmt, ...) log_write(lhp, __FILE__, __func__, __LINE__, \
-                                      LL_USR, fmt, __VA_ARGS__)
+                                      LL_USR, fmt, ##__VA_ARGS__)
 #endif // _LOG_HEADER_INCLUDED_
