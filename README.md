@@ -12,15 +12,22 @@ Ready to use Macros to log using each of the 3 levels of logging supported:
 - LSPT(lhp, fmt, ...)
 - LDEV(lhp, fmt, ...)
 
-LDEV() is for log messages useful to the developer (debug messages).
+Use LDEV() to log debug messages for the developer.
+
 LSPT() is for log messages useful to Support (troubleshooting messages that provide information).
+
 LUSR() is for warning or error messages that could be useful to users.
 
 # Build
 
 On Windows:
 
-Requires, Visual Studio 2012 & gyp.  In a VC++ command shell:
+Requires:
+* [Visual Studio 2012](http://www.microsoft.com/en-in/download/details.aspx?id=34673)
+* [Python](https://www.python.org)
+* [gyp](https://chromium.googlesource.com/external/gyp/)
+
+Ensure `python` and `gyp` are available in %PATH%. In a VC++ command shell:
 
 * set GYP_MSVS_VERSION=2012
 * gyp --depth=. log.gyp
